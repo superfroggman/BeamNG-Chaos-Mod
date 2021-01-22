@@ -10,9 +10,7 @@ end
 
 local c_tbl =
 {
-    [1] = setGravity,
-    [2] = marksism,
-    [3] = chaosSpawnCar,
+    [1] = chaosSpawnCar,
 }
 
 function runRandomFunction ()
