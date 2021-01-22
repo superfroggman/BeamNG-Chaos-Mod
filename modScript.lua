@@ -1,4 +1,5 @@
 -- Run with Lua:exec("scripts/BeamNG-Chaos-Mod/modScript.lua")
+-- usefull thing: for k,v in pairs(core_environment) do print(k) end
 
 print("loaded chaosMod")
 
@@ -17,8 +18,6 @@ end
 
 
 local function heavyFog ()
-    for k,v in pairs(core_environment) do print(k) end
-
     core_environment.setFogDensity(0.5)
 end
 
@@ -29,12 +28,10 @@ local function strongGravity ()
 end
 
 local function weakGravity ()
-    for k,v in pairs(core_environment) do print(k) end
     core_environment.setGravity(-3)
 end
 
 local function invertGravity ()
-    for k,v in pairs(core_environment) do print(k) end
     core_environment.setGravity(9.81)
 end
 
