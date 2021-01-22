@@ -1,32 +1,28 @@
- 
+
+
 print("loaded chaosMod")
 
-chaos()
+local function chaosSpawnCar ()
+    -- for k,v in pairs(core_vehicles) do print(k) end
+    core_vehicles.replaceVehicle("autobello",{})
+end
 
-function chaos ()
-    print("this is chaos")
-    print(math.random())
-    
-    local c_tbl =
-    {
-    [1] = add,
-    [2] = save,
-    }
 
-    local func = c_tbl[choice]
+local c_tbl =
+{
+    [1] = setGravity,
+    [2] = marksism,
+    [3] = chaosSpawnCar,
+}
+
+function runRandomFunction ()
+    local func = c_tbl[math.ceil(math.random()* #c_tbl)]
     if(func) then
         func()
     else
-        print " The program has been terminated."
-        print " Thank you!";
+        print("chaos function could not be executed")
     end
-
 end
 
-function setGravity ()
-    print("todo")
-end
 
-function marksism ()
-    print(openWebBrowser("https://marksism.space"))
-end
+runRandomFunction()
