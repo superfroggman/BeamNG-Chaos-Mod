@@ -1,20 +1,28 @@
-
+-- Run with Lua:exec("scripts/BeamNG-Chaos-Mod/modScript.lua")
 
 print("loaded chaosMod")
 
-local function spawnAutobello ()
+local function replaceAutobello ()
     core_vehicles.replaceVehicle("autobello",{})
 end
 
-local function spawnPessima ()
+local function replacePessima ()
     core_vehicles.replaceVehicle("pessima",{})
 end
+
+local function spawnChristmas ()
+    core_vehicles.spawnNewVehicle("christmas_tree",{})
+end
+
+
 
 local function heavyFog ()
     for k,v in pairs(core_environment) do print(k) end
 
     core_environment.setFogDensity(0.5)
 end
+
+
 
 local function strongGravity ()
     core_environment.setGravity(-20)
@@ -34,11 +42,12 @@ end
 
 local c_tbl =
 {
-    spawnAutobello,
-    spawnPessima,
+    replaceAutobello,
+    replacePessima,
+    spawnChristmas,
 
     heavyFog,
-    
+
     strongGravity,
     weakGravity,
     invertGravity,
