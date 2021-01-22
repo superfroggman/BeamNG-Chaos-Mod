@@ -67,7 +67,7 @@ local c_tbl =
     highFOV,
 }
 
-function runRandomFunction ()
+local function runRandomFunction ()
     local func = c_tbl[math.ceil(math.random()* #c_tbl)]
     if(func) then
         func()
