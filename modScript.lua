@@ -2,15 +2,46 @@
 
 print("loaded chaosMod")
 
-local function chaosSpawnCar ()
-    -- for k,v in pairs(core_vehicles) do print(k) end
+local function spawnAutobello ()
     core_vehicles.replaceVehicle("autobello",{})
 end
+
+local function spawnPessima ()
+    core_vehicles.replaceVehicle("pessima",{})
+end
+
+local function heavyFog ()
+    for k,v in pairs(core_environment) do print(k) end
+
+    core_environment.setFogDensity(0.5)
+end
+
+local function strongGravity ()
+    core_environment.setGravity(-20)
+end
+
+local function weakGravity ()
+    for k,v in pairs(core_environment) do print(k) end
+    core_environment.setGravity(-3)
+end
+
+local function invertGravity ()
+    for k,v in pairs(core_environment) do print(k) end
+    core_environment.setGravity(9.81)
+end
+
 
 
 local c_tbl =
 {
-    [1] = chaosSpawnCar,
+    spawnAutobello,
+    spawnPessima,
+
+    heavyFog,
+    
+    strongGravity,
+    weakGravity,
+    invertGravity,
 }
 
 function runRandomFunction ()
@@ -22,5 +53,11 @@ function runRandomFunction ()
     end
 end
 
+local function resetAll ()
+    core_environment.setFogDensity(0)
+    core_environment.setGravity(-9.81)
+end
 
+
+resetAll()
 runRandomFunction()
