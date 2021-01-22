@@ -38,15 +38,15 @@ end
 
 
 local function lowFOV ()
-    print(be:getPlayerVehicleID(0))
-
     core_camera.setFOV(be:getPlayerVehicleID(0), 40)
 end
 
 local function highFOV ()
-    print(be:getPlayerVehicleID(0))
-
     core_camera.setFOV(be:getPlayerVehicleID(0), 130)
+end
+
+local function rotateCamera ()
+    core_camera.setRotation(be:getPlayerVehicleID(0), {180,0,0})
 end
 
 
@@ -65,6 +65,7 @@ local c_tbl =
 
     lowFOV,
     highFOV,
+    rotateCamera,
 }
 
 local function runRandomFunction ()
