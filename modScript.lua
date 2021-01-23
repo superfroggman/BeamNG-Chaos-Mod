@@ -68,6 +68,12 @@ local function hotEngine ()
     veh:queueLuaCommand("powertrain.getDevice('mainEngine').thermals.engineBlockTemperature = 250")
 end
 
+local function explodeVehicle ()
+    print("Explode vehicle")
+    local veh = scenetree.findObject(be:getPlayerVehicleID(0))
+    veh:queueLuaCommand("fire.explodeVehicle()")
+end
+
 
 
 local function crazyAI ()
