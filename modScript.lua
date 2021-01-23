@@ -74,6 +74,11 @@ local function explodeVehicle ()
     veh:queueLuaCommand("fire.explodeVehicle()")
 end
 
+local function shiftToReverse ()
+    local veh = scenetree.findObject(be:getPlayerVehicleID(0))
+    veh:queueLuaCommand("drivetrain.shiftToGear(-1)")
+end
+
 
 
 local function crazyAI ()
@@ -111,6 +116,8 @@ local c_tbl =
     rotateCamera,
 
     hotEngine,
+    explodeVehicle,
+    shiftToReverse,
 
     crazyAI,
     carefullAI,
