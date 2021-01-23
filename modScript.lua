@@ -51,6 +51,14 @@ end
 
 
 
+local function hotEngine ()
+    local veh = scenetree.findObject(be:getPlayerVehicleID(0))
+
+    veh:queueLuaCommand("powertrain.getDevice(\"mainEngine\").thermals.engineBlockTemperature = 250")
+end
+
+
+
 local c_tbl =
 {
     replaceAutobello,
@@ -66,6 +74,7 @@ local c_tbl =
     lowFOV,
     highFOV,
     rotateCamera,
+    hotEngine,
 }
 
 local function runRandomFunction ()
