@@ -13,6 +13,11 @@ local function replacePessima ()
     core_vehicles.replaceVehicle("pessima",{})
 end
 
+local function replaceCustomVan ()
+    print("Replaced vehicle with Custom Van")
+    core_vehicles.replaceVehicle("van", {config = 'scripts/BeamNG-Chaos-Mod/VehicleConfigs/vanConfig.pc'})
+end
+
 local function spawnChristmas ()
     print("Spawned christmas tree")
     core_vehicles.spawnNewVehicle("christmas_tree",{})
@@ -103,6 +108,7 @@ local c_tbl =
 {
     replaceAutobello,
     replacePessima,
+    replaceCustomVan,
     -- spawnChristmas,
 
     heavyFog,
