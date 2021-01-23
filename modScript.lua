@@ -103,7 +103,7 @@ local c_tbl =
 {
     replaceAutobello,
     replacePessima,
-    spawnChristmas,
+    -- spawnChristmas,
 
     heavyFog,
 
