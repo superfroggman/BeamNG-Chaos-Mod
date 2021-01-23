@@ -80,6 +80,7 @@ local function explodeVehicle ()
 end
 
 local function shiftToReverse ()
+    print("Shift to reverse")
     local veh = scenetree.findObject(be:getPlayerVehicleID(0))
     veh:queueLuaCommand("drivetrain.shiftToGear(-1)")
 end
