@@ -54,8 +54,24 @@ end
 local function hotEngine ()
     local veh = scenetree.findObject(be:getPlayerVehicleID(0))
 
-    veh:queueLuaCommand("powertrain.getDevice(\"mainEngine\").thermals.engineBlockTemperature = 250")
+    veh:queueLuaCommand("powertrain.getDevice('mainEngine').thermals.engineBlockTemperature = 250")
 end
+
+
+
+local function crazyAI ()
+    local veh = scenetree.findObject(be:getPlayerVehicleID(0))
+    veh:queueLuaCommand("ai.setMode('random')")
+    veh:queueLuaCommand("ai.setAggression(2)")
+end
+
+local function carefullAI ()
+    local veh = scenetree.findObject(be:getPlayerVehicleID(0))
+    veh:queueLuaCommand("ai.setMode('random')")
+    veh:queueLuaCommand("ai.setAggression(0.1)")
+end
+
+
 
 
 
@@ -74,7 +90,11 @@ local c_tbl =
     lowFOV,
     highFOV,
     rotateCamera,
+
     hotEngine,
+
+    crazyAI,
+    carefullAI,
 }
 
 local function runRandomFunction ()
