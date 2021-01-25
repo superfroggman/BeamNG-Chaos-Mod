@@ -1,5 +1,4 @@
 -- Run with Lua:exec("scripts/BeamNG-Chaos-Mod/modScript.lua")
--- usefull thing: for k,v in pairs(core_environment) do print(k) end
 
 print("loaded chaosMod")
 
