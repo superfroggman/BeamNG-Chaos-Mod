@@ -11,10 +11,8 @@ angular.module("beamng.apps").directive("myApp", [
       require: "^bngApp",
       scope: true,
       link: function (scope, element, attrs) {
-
         scope.chaos = function () {
-          print("ran the cool function thingy");
-          bngApi.activeObjectLua("extensions.modScript.runRandomFunction()");
+          bngApi.engineLua("extensions.geScript.printCool()");
         };
       },
     };
